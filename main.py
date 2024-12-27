@@ -217,4 +217,5 @@ print(f"Test Accuracy for Random Forest: {accuracy_rf_test * 100:.2f}%")
 
 # Save the trained model using joblib
 import joblib
-joblib.dump(gb_best, 'gb_model.pkl')
+joblib.dump(model, 'placement_model.joblib')
+print("Model saved as 'placement_model.joblib'")

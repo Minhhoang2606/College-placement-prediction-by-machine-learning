@@ -1,10 +1,9 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 # Load the saved model
-with open('gb_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+model = joblib.load('placement_model.joblib')
 
 # Streamlit app
 st.title("Campus Placement Prediction App")
