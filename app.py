@@ -14,7 +14,7 @@ st.markdown("Predict whether a student will be placed based on their details.")
 gender = st.selectbox("Gender", ["Male", "Female"])
 stream = st.selectbox("Stream", ["Electronics And Communication", "Computer Science",
                                  "Information Technology", "Mechanical", "Electrical", "Civil"])
-internships = st.slider("Number of Internships", 0, 3, step=1)
+internships = st.selectbox("Number of Internships", [0, 1, 2, 3])
 cgpa = st.slider("CGPA", 5.0, 10.0, step=0.1)
 age = st.number_input("Age", min_value=18, max_value=30, value=21, step=1)
 hostel = st.selectbox("Residing in Hostel?", ["Yes", "No"])
