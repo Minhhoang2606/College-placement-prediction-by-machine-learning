@@ -215,9 +215,6 @@ accuracy_rf_test = accuracy_score(y_test, y_pred_rf)
 print(f"Best Parameters for Random Forest: {grid_rf.best_params_}")
 print(f"Test Accuracy for Random Forest: {accuracy_rf_test * 100:.2f}%")
 
-import pickle
-
-# Save the Gradient Boosting model (or use Random Forest if preferred)
-with open('placement_model.pkl', 'wb') as file:
-    pickle.dump(gb_best, file)  # Replace `gb_best` with `rf_best` if using Random Forest
-print("Model saved as 'placement_model.pkl'")
+# Save the trained model using joblib
+import joblib
+joblib.dump(gb_best, 'gb_model.pkl')

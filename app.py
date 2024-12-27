@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load the saved model
-with open('placement_model.pkl', 'rb') as file:
+with open('gb_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Streamlit app
